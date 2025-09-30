@@ -44,3 +44,8 @@ jobs:
     - name: Check for outdated dependencies
       run: |
         pip list --outdated
+
+    - name: Check for security
+      run: |
+        pip install pip-audit
+        pip-audit
